@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Project Title</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/article.css" rel="stylesheet">
+  <link rel="icon" href="img/icon.png" type="image/x-icon">
+  <style>
+    .content {
+      opacity: 0;
+      /* 初始状态设置为透明 */
+      animation: fade-in 1s ease-in-out forwards;
+      /* 应用动画效果 */
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        /* 动画开始时完全透明 */
+      }
+
+      to {
+        opacity: 1;
+        /* 动画结束时完全不透明 */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo2">
+      <a href="index.html" class="logo2"><img src="./img/icon.png" alt=""></a>
+      <a href="index.html" class="name">CHAINMAN</a>
+    </div>
+
+    <div class="group">
+      <ul class="navigation">
+        <li><a href="project.html" class="active">PROJECT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="Mario.html">CONTACT</a></li>
+      </ul>
+      <div class="search">
+        <span class="icon"><ion-icon name="search-outline" class="searchBtn"></ion-icon></span>
+        <span class="icon"><ion-icon name="close-outline" class="closeBtn"></ion-icon></span>
+      </div>
+      <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+    </div>
+    <div class="searchBox">
+      <input type="text" placeholder="Search here...">
+    </div>
+
+  </header>
+  <div class="content">
+
+
+    <h2>Interaction Design丨 Experience Description of "Simple Clothes Box"</h2>
+    <hr>
+    <img src="./img/work/xiaohe展示.png" alt="展示">
+
+
+    <h3>Source of Inspiration</h3>
+    <p class="text">
+      With the rise of fast fashion, Moments, Xiaohongshu, Douyin and other fashionable outfits are swiping the screen,
+      and what clothes to wear when going out has become a daily worry for everyone.
+      <br> <br>
+      With the enhancement of people's desire to buy clothes and the expansion of the clothing market, the number of old
+      clothes discarded every year in the world has reached 50 million tons.
+      <br> <br> In order to reduce the waste of clothing resources and alleviate people's anxiety about dressing, we
+      have designed the Simple Clothes Box APP. People will complete a convenient and interesting dressing experience
+      under the guidance of the dressing assistant box.
+    </p>
+
+    <img src="./img/work/xiaohe场景.gif" alt="场景" style="width: 300px;">
+    <h3>Project Description</h3>
+    <p>"Jianyi Box" is a practical APP with business features for smart wear. Users can use the "Simple Clothes Box" to
+      realize the freedom of dressing in limited clothes, and at the same time, they can reduce the waste of clothes and
+      protect the environment.</p>
+    <img src="./img/work/对比.png" alt="草稿" style="width: 600px;margin-top:-60px;margin-bottom: -50px;">
+    <p>In the early stage of design, we use creative thinking methods such as brainstorming, reverse thinking, and
+      negative thinking to enrich our design. In addition, we also conducted market research and found that both
+      teenagers and middle-aged people have certain pressure on dressing. People buy a lot of clothes every year, but
+      most of them will not wear them again, which leads to a lot of waste of clothes. From this, we made our user
+      portraits to enrich our design.</p>
+  </div>
+  <script>
+    // 监听窗口滚动事件
+    window.addEventListener('scroll', function () {
+      // 获取具有.fade-in类名的元素
+      const fadeElements = document.querySelectorAll('.fade-in');
+
+      // 遍历元素
+      fadeElements.forEach(element => {
+        // 计算元素的可见性
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // 如果元素进入可见区域，添加.fade-in-active类名，触发渐进显示动画
+        if (elementTop < windowHeight) {
+          element.classList.add('fade-in-active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,734 @@
+/* ======Index===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+
+body {
+    background-color: #040505;
+    min-height: 100vh;
+    font-family: Pixel, serif;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@font-face {
+    font-family: Smile;
+    src: url("../font/SmileySans-Oblique-2.ttf");
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url("../font/LanaPixel.ttf");
+}
+
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    background-image: url("../img/index/background.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+.footer img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    position: fixed;
+    height: auto;
+    left: 0%;
+    right: 0;
+    bottom: -1%;
+    text-align: center;
+}
+
+
+
+a,
+img {
+    text-decoration: none;
+    border: none
+}
+
+
+.contact {
+
+    font-size: 26px;
+    position: absolute;
+    top: 9%;
+    right: 7%;
+    transform: translate(-50%, -50%);
+    font-family: Pixel, serif;
+    text-decoration: none
+}
+
+a {
+    text-decoration: none;
+    color: #FF66C4;
+}
+
+a:focus {
+    color: #FF66C4;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #5CE1E6;
+    text-decoration: none;
+}
+
+a.active {
+    color: #8286F3;
+    font-weight: bold;
+}
+
+
+
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -68%);
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.button {
+    align-items: center;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+.button a {
+    margin: 0 14px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.button a:hover {
+    transform: scale(1.2);
+}
+
+
+
+.button img {
+    width: 100%;
+    height: auto;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .background {
+        background-image: none;
+    }
+
+}
+
+@media (min-width: 768px) and (max-height: 400px) {
+    .background {
+        background-image: none;
+    }
+
+    .footer {
+        width: 0%;
+    }
+}
+
+@media (max-width: 991px) {
+    /* 添加其他样式 */
+}
+
+@media (max-width: 500px) {
+    /* 添加其他样式 */
+}
+
+@media (max-width: 420px) {
+    /* 添加其他样式 */
+}
+
+/* =====Tunnel =====*/
+.tunnel {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.tunnel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: -5px;
+
+}
+
+.elevator {
+    position: fixed;
+    transform: translateY(-10%);
+    top: 0;
+    left: 25%;
+    max-width: 50%;
+    /* 设置最大宽度以缩小图片大小 */
+    width: auto;
+    height: auto;
+    z-index: 9998;
+    /* 设置 z-index 属性将图像置于顶层 */
+}
+
+.work1,
+.work2 {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.work1 {
+    top: 2.6%;
+    left: 6.3%;
+}
+
+.work2 {
+    top: 9%;
+    right: 6.3%;
+}
+
+.work1 a,
+.work2 a {
+    margin-bottom: 120%;
+    /* 设置图片间隔 */
+}
+
+.work1 img,
+.work2 img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.work1 .image2 {
+    margin-top: -65%;
+    width: 60%;
+}
+
+.work1 .image3 {
+    width: 65%;
+
+}
+
+.work1 .image4 {
+    width: 80%;
+    margin-top: 3%;
+}
+
+.work1 .image5 {
+    width: 70%;
+    margin-top: 30%;
+    margin-left: -4%;
+}
+
+.work1 .image6 {
+    width: 70%;
+    margin-top: 20%;
+    margin-left: -4%;
+}
+
+.work2 .image7 {
+    width: 60%;
+}
+
+.work2 .image8 {
+    margin-top: -20%;
+}
+
+.work2 .image9 {
+    width: 70%;
+    margin-top: -25%;
+}
+
+.work2 .image10 {
+    width: 70%;
+    margin-top: -40%;
+}
+
+.work2 .image11 {
+    width: 70%;
+    margin-top: -15%;
+}
+
+.work2 .image12 {
+    width: 70%;
+    margin-top: 15%;
+}
+
+.more img {
+    display: none;
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    max-width: 15%;
+    /* 设置最大宽度以缩小图片大小 */
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    z-index: 9999;
+    /* 设置 z-index 属性将图像置于顶层 */
+}
+
+.work1 a:hover img,
+.work2 a:hover img {
+    transform: scale(1.1);
+}
+
+/* =====Header =====*/
+
+header {
+    position:fixed;
+    background-color: #040505;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 30px 5px 30px #8488f87b;
+    font-family: Pixel, serif;
+    color: #FF66C4;
+    z-index: 1;
+}
+
+.logo2 {
+    display: flex;
+    align-items: center;
+
+}
+
+.name {
+    padding-left: 10px;
+    color: #FF66C4;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+.logo2 img {
+    width: 55px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #FF66C4;
+    text-transform: uppercase;
+
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #5CE1E6;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover::before {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+  
+
+header .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.searchBox {
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #040505;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchBox.active {
+    right: 0;
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 1.25em;
+    font-family: Pixel, serif;
+    background-color: #040505;
+    color: #ffffff;
+    border-bottom: 1px solid #5CE1E6;
+}
+
+.searchBtn {
+    position: relative;
+    left: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchBtn.active {
+    left: 0;
+}
+
+.closeBtn {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.closeBtn.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.menuToggle {
+    position: relative;
+    display: none;
+
+}
+
+.menuToggle.hide {
+    display: none;
+}
+
+/* =====Menu =====*/
+
+
+.type {
+    font-family: Pixel, serif;
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 55%;
+    
+}
+
+.word {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.word li {
+    position: relative;
+    list-style: none;
+}
+
+.word li a {
+  
+    font-size: 60px;
+    text-decoration: none;
+    line-height: 80px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #8c1e62;
+}
+
+
+.word li span.image {
+    position: fixed;
+    top: 55%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* 调整为所需的宽度 */
+    height: 580px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .word li:hover span.image {
+    opacity: 1;
+    visibility: visible;
+  }
+ 
+.word li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+.word li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+.word li .image.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+
+@media (max-width: 800px) {
+    .searchBtn {
+        left: 0;
+    }
+
+    .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+
+    header .navigation {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+
+    header.open .navigation {
+        opacity: 1;
+        visibility: visible;
+        top: 80px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #101313;
+        height: calc(100vh - 80px);
+        padding: 40px;
+        border-top: 3px solid #8488f87b;
+    }
+
+    header.open .navigation li a {
+        font-size: 1.25em;
+    }
+
+    .type {
+        margin-left: 35%;
+        justify-content: center;
+    }
+    .word li a {
+          
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .word li .image {
+        display: none;
+      }
+}
+
+/* =====project =====*/
+section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /* 开启3D效果 */
+            transform-style: preserve-3d;
+            margin: 25px;
+            margin-top: 150px;
+        }
+
+        .card {
+            /* 相对定位 */
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+            /* 开启3D效果 */
+            transform-style: preserve-3d;
+            /* 视距 */
+            perspective: 1000px;
+        }
+
+        .card .box {
+            /* 绝对定位 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            /* 设置过渡 */
+            transition: 1s ease;
+        }
+
+        .card .box .img-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card .box .img-box img {
+            width: 100%;
+            height: 100%;
+            /* 保持原有的尺寸比例，裁切长边 */
+            object-fit: cover;
+        }
+
+        .card .box .con-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #8488f87b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 隐藏旋转div元素的背面 */
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            /* 默认沿Y轴旋转180度（在背面） */
+            transform: rotateY(180deg);
+        }
+
+        .card .box .con-box div {
+            color: #fff;
+            padding: 20px;
+            /* 渐变背景 */
+            background: #514a9d;
+            /* 默认沿Z轴偏移100px */
+            transform: translateZ(100px);
+        }
+
+        .card .box .con-box div h2 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .card .box .con-box div p {
+            font-size: 15px;
+            text-align: justify;
+            margin-top: 5px;
+        }
+
+        .card:hover .box {
+            /* 鼠标移入，盒子旋转180度 */
+            transform: rotateY(180deg);
+        }
+
+/* =====about =====*/
+
+        .jianli2 img {
+            width: 70%;
+            /* 每行显示四张图片，所以宽度设置为25% */
+            height: auto;
+            object-fit: cover;
+            margin-bottom: -5px;
+        }
+
+        .jianli{
+            
+            text-align: center;
+            font-size: 150%;
+            text-decoration: none;
+            display: block;
+            margin-top: 100px;
+        }
+
+        .jianli a:hover {
+            color: #5CE1E6;
+            text-decoration: none;
+        }
+
+
+
+
+
+        
